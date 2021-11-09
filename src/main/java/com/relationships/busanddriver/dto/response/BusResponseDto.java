@@ -1,10 +1,7 @@
 package com.relationships.busanddriver.dto.response;
 
-import com.relationships.busanddriver.dao.entity.BusDriver;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.util.List;
 
 @Data
 @Builder
@@ -19,5 +16,5 @@ public class BusResponseDto {
     boolean hasElectricEngine;
     BusRoadResponseDto busRoad;
     BusGarageResponseDto busGarage;
-    List<BusDriver> busDrivers;
+
 }

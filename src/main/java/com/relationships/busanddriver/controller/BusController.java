@@ -34,9 +34,9 @@ public class BusController {
         busService.deleteBusById(busId);
     }
 
-    @PutMapping("{busId}/busdrivers/{driverId}")
+   /* @PutMapping("{busId}/busdrivers/{driverId}")
     public BusResponseDto addDriverToBus(@PathVariable Long busId,
                                          @PathVariable Long driverId) {
         return busService.assignBusDriver(busId, driverId);
-    }
+    }*/
 }

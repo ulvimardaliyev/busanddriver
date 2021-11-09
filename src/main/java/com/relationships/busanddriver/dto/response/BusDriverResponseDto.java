@@ -1,6 +1,5 @@
 package com.relationships.busanddriver.dto.response;
 
-import com.relationships.busanddriver.dao.entity.Bus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -15,5 +14,5 @@ public class BusDriverResponseDto {
     Long busDriverId;
     String driverName;
     String driverSurname;
-    List<Bus> buses;
+    List<BusResponseDto> buses;
 }

@@ -1,7 +1,5 @@
 package com.relationships.busanddriver.dao.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -15,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "busDriverId")
+
 public class BusDriver {
 
     @Id
@@ -30,9 +28,4 @@ public class BusDriver {
             inverseJoinColumns = @JoinColumn(name = "busId", referencedColumnName = "busId")
     )
     List<Bus> buses;
-
-    /*@PreRemove
-    private void removeBusFromDriver() {
-        buses.forEach(bus-> bus.getBusDrivers().clear());
-    }*/
 }
