@@ -16,5 +16,4 @@ public interface BusService {
 
     BusResponseDto assignBusDriver(Long busId, Long driverId);
 
-    BusResponseDto assignBusDrivers(Long busId, List<Long> driversId);
 }

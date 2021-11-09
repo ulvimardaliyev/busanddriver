@@ -68,8 +68,4 @@ public class BusServiceImpl implements BusService {
         return busMapper.busToResponseWithUpdatedDrivers(bus);
     }
 
-    @Override
-    public BusResponseDto assignBusDrivers(Long busId, List<Long> driversId) {
-        return null;
-    }
 }
