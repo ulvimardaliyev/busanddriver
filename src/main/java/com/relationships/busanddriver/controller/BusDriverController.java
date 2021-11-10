@@ -41,4 +41,11 @@ public class BusDriverController {
                                                   @PathVariable Long busId) {
         return busDriverService.addBusToBusDriver(busDriverId, busId);
     }
+
+    @PatchMapping("{busDriverId}")
+    public BusDriverResponseDto updateBus(@PathVariable Long busDriverId,
+                                          @RequestBody BusDriverRequestDto busDriverRequest) {
+
+        return busDriverService.updateBusDriver(busDriverId, busDriverRequest);
+    }
 }

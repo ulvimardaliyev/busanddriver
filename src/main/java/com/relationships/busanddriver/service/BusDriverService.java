@@ -15,4 +15,8 @@ public interface BusDriverService {
     long saveNewBusDriver(BusDriverRequestDto busDriverRequestDto);
 
     BusDriverResponseDto addBusToBusDriver(Long busDriverId, Long busId);
+
+
+    BusDriverResponseDto updateBusDriver(Long busDriverId,
+                                         BusDriverRequestDto busDriverRequest);
 }
