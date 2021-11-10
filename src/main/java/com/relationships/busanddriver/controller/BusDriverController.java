@@ -35,7 +35,6 @@ public class BusDriverController {
         return busDriverService.saveNewBusDriver(busDriverRequestDto);
     }
 
-    //TODO write PUT Method
     @PutMapping("{busDriverId}/buses/{busId}")
     public BusDriverResponseDto addBusToBusDriver(@PathVariable Long busDriverId,
                                                   @PathVariable Long busId) {
@@ -45,7 +44,6 @@ public class BusDriverController {
     @PatchMapping("{busDriverId}")
     public BusDriverResponseDto updateBus(@PathVariable Long busDriverId,
                                           @RequestBody BusDriverRequestDto busDriverRequest) {
-
         return busDriverService.updateBusDriver(busDriverId, busDriverRequest);
     }
 }
