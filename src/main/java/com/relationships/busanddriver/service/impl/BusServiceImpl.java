@@ -68,4 +68,12 @@ public class BusServiceImpl implements BusService {
         return busMapper.busToResponseWithUpdatedDrivers(bus);
     }
 
+    @Override
+    public BusResponseDto updateBus(Long busId,
+                                    BusRequestDto busRequest) {
+        Bus bus = busRepository.findBusByBusId(busId);
+
+        Bus updatedBus = busMapper.updateThisBus(busRequest, bus);
+        return busMapper.busToResponseWithUpdatedDrivers(busRepository.save(updatedBus));
+    }
 }

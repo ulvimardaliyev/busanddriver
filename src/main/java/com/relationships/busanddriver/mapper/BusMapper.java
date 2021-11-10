@@ -5,8 +5,7 @@ import com.relationships.busanddriver.dao.entity.BusGarage;
 import com.relationships.busanddriver.dto.request.BusRequestDto;
 import com.relationships.busanddriver.dto.response.BusGarageResponseDto;
 import com.relationships.busanddriver.dto.response.BusResponseDto;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.mapstruct.*;
 
 import java.util.List;
 
@@ -22,4 +21,9 @@ public interface BusMapper {
     Bus requestToBus(BusRequestDto busRequestDto, BusGarage busGarage);
 
     BusResponseDto busToResponseWithUpdatedDrivers(Bus bus);
+
+    Bus bus(BusRequestDto busRequestDto);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    Bus updateThisBus(BusRequestDto busRequestDto, @MappingTarget Bus bus);
 }

@@ -21,7 +21,7 @@ public class Bus {
     Long busId;
     String busModel;
     String manufacturer;
-    int seatCount;
+    Integer seatCount;
     boolean hasElectricEngine;
 
     @OneToOne(cascade = CascadeType.ALL)

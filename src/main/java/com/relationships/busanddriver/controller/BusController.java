@@ -34,4 +34,9 @@ public class BusController {
         busService.deleteBusById(busId);
     }
 
+    @PatchMapping("{busId}")
+    public BusResponseDto updateBus(@PathVariable Long busId,
+                                    @RequestBody BusRequestDto busRequestDto) {
+        return busService.updateBus(busId, busRequestDto);
+    }
 }

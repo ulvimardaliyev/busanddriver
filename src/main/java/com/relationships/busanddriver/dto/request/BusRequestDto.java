@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 public class BusRequestDto {
     String busModel;
     String manufacturer;
-    int seatCount;
+    Integer seatCount;
     boolean hasElectricEngine;
     BusRoadRequestDto busRoad;
     Long busGarageId;
